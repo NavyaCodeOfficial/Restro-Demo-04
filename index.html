@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Moonlight Cafe | Etah</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@200;300;400;500&family=Cinzel:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Particles Canvas -->
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- Custom Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-dot" id="cursor-dot"></div>
+
+  <!-- ═══════════════════ NAVBAR ═══════════════════ -->
+  <nav id="navbar">
+    <div class="nav-logo">
+      <span class="moon-icon">☽</span>
+      <span>Moonlight</span>
+    </div>
+    <div class="nav-links" id="navLinks">
+      <a href="#hero">Home</a>
+      <a href="#about">About</a>
+      <a href="#menu">Menu</a>
+      <a href="#experience">Experience</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <button class="nav-cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+      Book Table
+    </button>
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════ HERO ═══════════════════ -->
+  <section id="hero">
+    <div class="hero-bg-layer"></div>
+    <div class="moon-glow" id="moonGlow"></div>
+    <div class="moon-circle"></div>
+    <div class="star-field" id="starField"></div>
+
+    <div class="hero-content" data-parallax="0.4">
+      <p class="hero-eyebrow reveal">✦ Premier Rooftop Destination ✦</p>
+      <h1 class="hero-title reveal">
+        Dine Under<br /><em>the Moonlight</em>
+      </h1>
+      <p class="hero-sub reveal">
+        Experience the most beautiful rooftop dining in Etah.<br />
+        Where every evening becomes an unforgettable memory.
+      </p>
+      <div class="hero-buttons reveal">
+        <a href="#menu" class="btn-primary">
+          <span>View Menu</span>
+          <div class="btn-glow"></div>
+        </a>
+        <a href="#contact" class="btn-secondary">Book a Table</a>
+      </div>
+    </div>
+
+    <div class="hero-scroll-hint">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ ABOUT ═══════════════════ -->
+  <section id="about">
+    <div class="section-tag reveal">Our Story</div>
+    <div class="about-grid">
+      <div class="about-text">
+        <h2 class="section-title reveal">
+          A Night to<br /><em>Remember Always</em>
+        </h2>
+        <p class="about-desc reveal">
+          Perched high above the city, Moonlight Rooftop Cafe invites you to step into a world where the sky meets the plate. Under a canopy of stars with the gentle glow of the moon as your companion, every meal transforms into a cherished memory.
+        </p>
+        <div class="about-stats reveal">
+          <div class="stat">
+            <span class="stat-num" data-count="500">0</span><span>+</span>
+            <p>Happy Guests Monthly</p>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-num" data-count="40">0</span><span>+</span>
+            <p>Signature Dishes</p>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-num" data-count="4">0</span><span>.7★</span>
+            <p>Average Rating</p>
+          </div>
+        </div>
+      </div>
+      <div class="about-cards reveal">
+        <div class="about-card glass-card tilt-card">
+          <div class="card-icon">🌙</div>
+          <h3>Rooftop Ambiance</h3>
+          <p>Open sky, city lights below, moonlight above — an ambiance you'll find nowhere else in Etah.</p>
+        </div>
+        <div class="about-card glass-card tilt-card">
+          <div class="card-icon">🎉</div>
+          <h3>Perfect for Parties</h3>
+          <p>Birthday celebrations, private gatherings, and special occasions deserve a spectacular backdrop.</p>
+        </div>
+        <div class="about-card glass-card tilt-card">
+          <div class="card-icon">🍽️</div>
+          <h3>Relaxing Night Dining</h3>
+          <p>Savour slow evenings with carefully crafted cuisine, soft music, and the cool night breeze.</p>
+        </div>
+        <div class="about-card glass-card tilt-card">
+          <div class="card-icon">🏆</div>
+          <h3>Best Food in Etah</h3>
+          <p>Locally loved, widely praised — our kitchen delivers excellence in every dish we serve.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ MENU ═══════════════════ -->
+  <section id="menu">
+    <div class="section-tag reveal">Culinary Delights</div>
+    <h2 class="section-title text-center reveal">Our Special<br /><em>Menu</em></h2>
+    <p class="section-sub text-center reveal">Crafted with passion, served with love — every bite tells a story.</p>
+
+    <div class="menu-grid">
+      <div class="menu-card glass-card tilt-card reveal">
+        <div class="menu-img pizza-img">
+          <div class="menu-overlay"></div>
+          <div class="menu-emoji">🍕</div>
+        </div>
+        <div class="menu-info">
+          <h3>Artisan Pizzas</h3>
+          <p>Wood-fired thin-crust masterpieces with premium toppings and house-made sauces that melt on your palate.</p>
+          <div class="menu-tags">
+            <span>Veg</span>
+            <span>Non-Veg</span>
+            <span>Chef's Special</span>
+          </div>
+          <div class="menu-price">Starting ₹199</div>
+        </div>
+      </div>
+
+      <div class="menu-card glass-card tilt-card reveal">
+        <div class="menu-img fastfood-img">
+          <div class="menu-overlay"></div>
+          <div class="menu-emoji">🍔</div>
+        </div>
+        <div class="menu-info">
+          <h3>Fast Food Favourites</h3>
+          <p>From loaded burgers to crispy fries — comfort classics elevated with our signature Moonlight twist.</p>
+          <div class="menu-tags">
+            <span>Burgers</span>
+            <span>Wraps</span>
+            <span>Momos</span>
+          </div>
+          <div class="menu-price">Starting ₹99</div>
+        </div>
+      </div>
+
+      <div class="menu-card glass-card tilt-card reveal">
+        <div class="menu-img cafe-img">
+          <div class="menu-overlay"></div>
+          <div class="menu-emoji">☕</div>
+        </div>
+        <div class="menu-info">
+          <h3>Café Drinks</h3>
+          <p>Artisanal cold brews, moon-themed mocktails, refreshing shakes and more — sip under the stars.</p>
+          <div class="menu-tags">
+            <span>Coffee</span>
+            <span>Mocktails</span>
+            <span>Shakes</span>
+          </div>
+          <div class="menu-price">Starting ₹79</div>
+        </div>
+      </div>
+
+      <div class="menu-card glass-card tilt-card reveal">
+        <div class="menu-img snacks-img">
+          <div class="menu-overlay"></div>
+          <div class="menu-emoji">🥗</div>
+        </div>
+        <div class="menu-info">
+          <h3>Party Snacks</h3>
+          <p>Platters, finger foods, and sharable bites designed to keep your celebration alive all night long.</p>
+          <div class="menu-tags">
+            <span>Platters</span>
+            <span>Starters</span>
+            <span>Nachos</span>
+          </div>
+          <div class="menu-price">Starting ₹149</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ EXPERIENCE ═══════════════════ -->
+  <section id="experience">
+    <div class="exp-bg-layer"></div>
+    <div class="section-tag reveal">Why Choose Us</div>
+    <h2 class="section-title text-center reveal">The Moonlight<br /><em>Experience</em></h2>
+
+    <div class="exp-grid">
+      <div class="exp-card glass-card tilt-card reveal">
+        <div class="exp-icon-wrap">
+          <span class="exp-icon">🌃</span>
+          <div class="exp-icon-glow"></div>
+        </div>
+        <h3>Rooftop Dining</h3>
+        <p>Elevated seating with panoramic views of Etah's skyline. Fresh air, open sky, unforgettable moments.</p>
+      </div>
+      <div class="exp-card glass-card tilt-card reveal">
+        <div class="exp-icon-wrap">
+          <span class="exp-icon">🎊</span>
+          <div class="exp-icon-glow"></div>
+        </div>
+        <h3>Party Friendly</h3>
+        <p>Private event setups, decoration support, and curated party menus — we make your event legendary.</p>
+      </div>
+      <div class="exp-card glass-card tilt-card reveal">
+        <div class="exp-icon-wrap">
+          <span class="exp-icon">💫</span>
+          <div class="exp-icon-glow"></div>
+        </div>
+        <h3>Romantic Ambience</h3>
+        <p>Candlelit tables, moonlit nights, gentle breeze — the perfect setting for your special someone.</p>
+      </div>
+      <div class="exp-card glass-card tilt-card reveal">
+        <div class="exp-icon-wrap">
+          <span class="exp-icon">👨‍👩‍👧</span>
+          <div class="exp-icon-glow"></div>
+        </div>
+        <h3>Family Friendly</h3>
+        <p>A welcoming space for all ages. Kids' menu available. Safe, spacious, and full of warmth.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ GALLERY ═══════════════════ -->
+  <section id="gallery">
+    <div class="section-tag reveal">Visual Journey</div>
+    <h2 class="section-title text-center reveal">Our<br /><em>Gallery</em></h2>
+
+    <div class="gallery-grid">
+      <div class="gallery-item g-large reveal">
+        <div class="gallery-inner">
+          <div class="gal-emoji">🌙</div>
+          <div class="gallery-label">Moonlit Terrace</div>
+        </div>
+      </div>
+      <div class="gallery-item reveal">
+        <div class="gallery-inner">
+          <div class="gal-emoji">🍕</div>
+          <div class="gallery-label">Signature Pizza</div>
+        </div>
+      </div>
+      <div class="gallery-item reveal">
+        <div class="gallery-inner">
+          <div class="gal-emoji">☕</div>
+          <div class="gallery-label">Café Corner</div>
+        </div>
+      </div>
+      <div class="gallery-item reveal">
+        <div class="gallery-inner">
+          <div class="gal-emoji">🎉</div>
+          <div class="gallery-label">Party Setup</div>
+        </div>
+      </div>
+      <div class="gallery-item g-wide reveal">
+        <div class="gallery-inner">
+          <div class="gal-emoji">🌟</div>
+          <div class="gallery-label">Starlit Evenings</div>
+        </div>
+      </div>
+      <div class="gallery-item reveal">
+        <div class="gallery-inner">
+          <div class="gal-emoji">🍔</div>
+          <div class="gallery-label">Gourmet Burgers</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ REVIEWS ═══════════════════ -->
+  <section id="reviews">
+    <div class="section-tag reveal">Guest Words</div>
+    <h2 class="section-title text-center reveal">What People<br /><em>Say About Us</em></h2>
+
+    <div class="rating-hero reveal">
+      <div class="rating-number">4.7</div>
+      <div class="rating-stars">★★★★★</div>
+      <div class="rating-label">Overall Rating · 200+ Reviews</div>
+    </div>
+
+    <div class="reviews-grid">
+      <div class="review-card glass-card tilt-card reveal">
+        <div class="review-quote">"</div>
+        <p>Wonderful service and food! The rooftop setting is absolutely magical at night. We celebrated our anniversary here and it was beyond perfect.</p>
+        <div class="review-footer">
+          <div class="reviewer-avatar">RP</div>
+          <div>
+            <strong>Rahul Prakash</strong>
+            <div class="review-stars">★★★★★</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card glass-card tilt-card reveal">
+        <div class="review-quote">"</div>
+        <p>Very good location and services. The staff is incredibly attentive and the ambiance is unlike anything else in Etah. Will definitely come back!</p>
+        <div class="review-footer">
+          <div class="reviewer-avatar">SM</div>
+          <div>
+            <strong>Sunita Mishra</strong>
+            <div class="review-stars">★★★★★</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card glass-card tilt-card reveal">
+        <div class="review-quote">"</div>
+        <p>One of the best places in Etah for food and party. We hosted a birthday here and everything was perfectly arranged. Highly recommended!</p>
+        <div class="review-footer">
+          <div class="reviewer-avatar">AK</div>
+          <div>
+            <strong>Ankit Kumar</strong>
+            <div class="review-stars">★★★★★</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ CONTACT ═══════════════════ -->
+  <section id="contact">
+    <div class="section-tag reveal">Find Us</div>
+    <h2 class="section-title text-center reveal">Reserve Your<br /><em>Moonlit Evening</em></h2>
+
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <div class="contact-item glass-card">
+          <div class="contact-icon">📍</div>
+          <div>
+            <h4>Our Location</h4>
+            <p>ADDRESS<br /><br />Uttar Pradesh, India</p>
+          </div>
+        </div>
+        <div class="contact-item glass-card">
+          <div class="contact-icon">📞</div>
+          <div>
+            <h4>Call Us</h4>
+            <p><a href="tel:06397315379">91XXXXXXXXXX</a></p>
+            <p style="font-size:0.8rem;color:var(--silver-dim);margin-top:4px">Available 11 AM – 11 PM</p>
+          </div>
+        </div>
+        <div class="contact-item glass-card">
+          <div class="contact-icon">🕐</div>
+          <div>
+            <h4>Opening Hours</h4>
+            <p>Monday – Sunday<br />11:00 AM – 11:00 PM</p>
+          </div>
+        </div>
+        <a href="tel:XXXXXXXXXX" class="btn-primary book-btn">
+          <span>📞 Book Your Table Now</span>
+          <div class="btn-glow"></div>
+        </a>
+      </div>
+      <div class="map-container reveal">
+        <div class="map-frame">
+          <iframe
+            src="https://www.google.com/maps/"
+            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade" title="Moonlight Rooftop Location">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ FOOTER ═══════════════════ -->
+  <footer id="footer">
+    <div class="footer-glow"></div>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <span class="moon-icon">☽</span>
+          <span>Moonlight</span>
+        </div>
+        <p>Rooftop Cafe</p>
+        <p class="footer-tagline">Where every night becomes a story.</p>
+        <div class="social-icons">
+          <a href="#" class="social-icon" aria-label="Instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="#" class="social-icon" aria-label="Facebook">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="tel:06397315379" class="social-icon" aria-label="Phone">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.6 19.79 19.79 0 0 1 1.61 5 2 2 0 0 1 3.59 2.96h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 10.09a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="#hero">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#menu">Our Menu</a>
+        <a href="#experience">Experience</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#reviews">Reviews</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Opening Hours</h4>
+        <div class="hours-row"><span>Mon – Fri</span><span>11 AM – 11 PM</span></div>
+        <div class="hours-row"><span>Saturday</span><span>11 AM – 11 PM</span></div>
+        <div class="hours-row"><span>Sunday</span><span>11 AM – 11 PM</span></div>
+        <div class="hours-note">Kitchen closes 30 min before closing.</div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>ADDRESS,<br />UP</p>
+        <a href="tel:XXXXXXXXXX" class="footer-phone">📞 XXXXXXXXXXX</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 Moonlight Rooftop Cafe. All rights reserved.</p>
+      <p>Crafted with ☽ in Etah, Uttar Pradesh | Created by NavyaCode</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
